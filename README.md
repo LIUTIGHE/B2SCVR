@@ -41,7 +41,7 @@ If ```ModuleNotFoundError: No module named 'torchvision.transforms.functional_te
 
 ### Quick Test
 
-0. Prepare inputs: a corrupted video bitstream and the first corruption indication (e.g., the first corruption mask in frame 9 of ```inputs/trucks-race_2.h264```).
+0. Prepare inputs and model checkpoints: a corrupted video bitstream and the first corruption indication (e.g., the first corruption mask in frame 9 of ```inputs/trucks-race_2.h264```). Then download the model checkpoints via [this link](https://entuedu-my.sharepoint.com/:f:/g/personal/liut0038_e_ntu_edu_sg/EvxHRdWSFpZIhyiqHU-NYmEBGy5N1iJ4I69iigYtL7FBkw?e=GpPNnL), and put into ```checkpoints/``` folder.
    
 1. Extract the corrupted frames and motion vector (mv) and prediction mode (pm) for each frame from the input corrupted video bitstream (e.g., ```inputs/trucks-race_2.h264```)
    ```python inputs.py --input inputs/trucks-race_2.h264```
