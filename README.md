@@ -2,7 +2,7 @@
 
    <h1>[ACM MM'25] Towards Blind Bitstream-corrupted Video Recovery: A Visual Foundation Model-driven Framework </h1>
 
-> [Tianyi Liu](https://scholar.google.com/citations?user=Sdw8w_YAAAAJ&hl=zh-CN)<sup>1</sup>, [Kejun Wu]()<sup>2</sup>, [Chen Cai](https://scholar.google.com/citations?user=awQEstcAAAAJ&hl=zh-CN)<sup>1</sup>, [Yi Wang](https://scholar.google.com/citations?user=MAG909MAAAAJ&hl=zh-CN)<sup>3</sup>, [Kim-Hui Yap](https://scholar.google.com/citations?user=nr86m98AAAAJ&hl=zh-CN)<sup>1</sup>, and [Lap-Pui Chau](https://scholar.google.com/citations?user=MYREIH0AAAAJ&hl=zh-CN)<sup>3</sup><br>
+> [Tianyi Liu](https://scholar.google.com/citations?user=Sdw8w_YAAAAJ&hl=zh-CN)<sup>1</sup>, [Kejun Wu](https://kejun-wu.github.io/)<sup>2</sup>, [Chen Cai](https://scholar.google.com/citations?user=awQEstcAAAAJ&hl=zh-CN)<sup>1</sup>, [Yi Wang](https://scholar.google.com/citations?user=MAG909MAAAAJ&hl=zh-CN)<sup>3</sup>, [Kim-Hui Yap](https://scholar.google.com/citations?user=nr86m98AAAAJ&hl=zh-CN)<sup>1</sup>, and [Lap-Pui Chau](https://scholar.google.com/citations?user=MYREIH0AAAAJ&hl=zh-CN)<sup>3</sup><br>
 > <sup>1</sup>School of Electrical and Electronic Engineering, Nanyang Technological University<br>
 > <sup>2</sup>School of Electronic Information and Communications, Huazhong University of Science and Technology<br>
 > <sup>3</sup>Department of Electrical and Electronic Engineering, The Hong Kong Polytechnic University
@@ -15,7 +15,7 @@
 
 </div>
 
-### Installation
+## Installation
 
 ```bash
 git clone https://github.com/LIUTIGHE/B2SCVR.git
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 If ```ModuleNotFoundError: No module named 'torchvision.transforms.functional_tensor``` occurs, one possible solution is to manually modify the 8th row in ```degradations.py``` from the Error from ``` from torchvision.transforms.functional_tensor import rgb_to_grayscale ``` to ``` from torchvision.transforms.functional import rgb_to_grayscale ```
 
-### Quick Test
+## Quick Test
 
 0. Prepare inputs and model checkpoints: a corrupted video bitstream and the first corruption indication (e.g., the first corruption mask in frame 9 of ```inputs/trucks-race_2.h264```). Then download the model checkpoints via [this link](https://entuedu-my.sharepoint.com/:f:/g/personal/liut0038_e_ntu_edu_sg/EvxHRdWSFpZIhyiqHU-NYmEBGy5N1iJ4I69iigYtL7FBkw?e=GpPNnL), and put into ```checkpoints/``` folder.
    
@@ -57,7 +57,7 @@ If ```ModuleNotFoundError: No module named 'torchvision.transforms.functional_te
    python test.py --ckpt checkpoints/B2SCVR.pth --input_video inputs/bsc_imgs/trucks-race --dac_mask inputs/results/trucks-race --width 432 --height 240  # set 240P test if OOM occurs
    ```
 
-4. The recovered frame sequence will be saved in ```outputs/``` folder.
+4. The recovered frames sequence and GIF video will be saved in ```outputs/``` folder.
 
 ## Citation
 
