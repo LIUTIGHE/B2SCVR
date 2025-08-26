@@ -56,6 +56,7 @@ If ```ModuleNotFoundError: No module named 'torchvision.transforms.functional_te
 
 3. Stage 2: Use the CFC-based recovery model to perform restoration
    ```bash
+   cd ../../..
    python test.py --ckpt checkpoints/B2SCVR.pth --input_video inputs/bsc_imgs/trucks-race --dac_mask inputs/results/trucks-race --width 432 --height 240  # set 240P test if OOM occurs
    ```
 
