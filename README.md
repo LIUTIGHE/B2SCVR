@@ -38,6 +38,8 @@ pip install -r requirements.txt
 
 ```
 
+- If intel MKL lib issue occurs, can reinstall torch with ```pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121```
+
 - If ```ModuleNotFoundError: No module named 'torchvision.transforms.functional_tensor``` occurs, one possible solution is to manually modify the 8th row in ```degradations.py``` mentioned in the Error, from ``` from torchvision.transforms.functional_tensor import rgb_to_grayscale ``` to ``` from torchvision.transforms.functional import rgb_to_grayscale ```
 
 - If you meet mmcv-related error, please modify the reported line ```mmcv.cnn -> mmengine.model``` / ```mmcv.runner -> mmengine.runner```.
